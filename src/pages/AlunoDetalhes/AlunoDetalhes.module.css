@@ -1,0 +1,164 @@
+.pagina {
+  width: min(100% - 2rem, 1000px);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #166534;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.cabecalho {
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  color: #111827;
+}
+
+.cabecalho p {
+  margin: 0.4rem 0 0;
+  color: #6b7280;
+}
+
+.statusAtivo,
+.statusInativo {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.statusAtivo {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.statusInativo {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.grade .card {
+  margin-bottom: 0;
+}
+
+.card h2 {
+  margin: 0 0 1.25rem;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.6rem 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.card p strong {
+  color: #1f2937;
+}
+
+.historico {
+  display: flex;
+  flex-direction: column;
+}
+
+.mensalidade {
+  padding: 1rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1.5rem;
+
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.mensalidade:first-child {
+  padding-top: 0;
+}
+
+.mensalidade:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.mensalidade div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mensalidade div span {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.erro {
+  color: #b91c1c;
+}
+
+
+@media (max-width: 600px) {
+  .paginacao {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho {
+    align-items: flex-start;
+  }
+
+  .mensalidade {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    width: min(100% - 1.5rem, 1000px);
+    padding-top: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}

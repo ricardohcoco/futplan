@@ -1,0 +1,192 @@
+.card {
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  margin: 0 0 1.5rem;
+
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label,
+.dias legend {
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form input:not([type="checkbox"]),
+.form select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+
+  color: #1f2937;
+  background-color: #ffffff;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form input:not([type="checkbox"]):focus,
+.form select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+.duasColunas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.campo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dias {
+  margin: 0;
+  padding: 1rem;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  background-color: #f9fafb;
+}
+
+.dias legend {
+  padding: 0 0.4rem;
+}
+
+.opcoesDias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.opcaoDia {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: #4b5563;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.opcaoDia input {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #166534;
+  cursor: pointer;
+}
+
+.acoesFormulario {
+  margin-top: 0.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.acoesFormulario button {
+  padding: 0.7rem 1.1rem;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #166534;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.acoesFormulario button:hover:not(:disabled) {
+  background-color: #14532d;
+}
+
+.acoesFormulario button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.acoesFormulario button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.acoesFormulario .botaoSecundario {
+  color: #374151;
+  background-color: #f3f4f6;
+
+  border: 1px solid #e5e7eb;
+}
+
+.acoesFormulario .botaoSecundario:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.erro {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
+
+  color: #991b1b;
+  background-color: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .duasColunas {
+    grid-template-columns: 1fr;
+  }
+
+  .opcoesDias {
+    gap: 0.75rem 1rem;
+  }
+
+  .acoesFormulario {
+    flex-direction: column;
+  }
+
+  .acoesFormulario button {
+    width: 100%;
+  }
+}

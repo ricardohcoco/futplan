@@ -1,0 +1,158 @@
+.container {
+  min-height: calc(100vh - 72px);
+  padding: 3rem 2rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  margin: 0 0 2.5rem;
+
+  color: #6b7280;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.secao h2 {
+  margin: 0;
+
+  color: #111827;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.cardsGestao {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cardsMensalidades {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  min-width: 0;
+  min-height: 150px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #bbf7d0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  margin: 0;
+
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.number {
+  color: #166534;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.paymentInfo {
+  display: flex;
+  gap: 2rem;
+}
+
+.paymentInfo p {
+  margin: 0;
+
+  color: #4b5563;
+}
+
+.paymentInfo strong {
+  color: #166534;
+  font-size: 1.25rem;
+}
+
+.cardInfo {
+  margin: 0;
+
+  color: #6b7280;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .cardsGestao {
+    grid-template-columns: 1fr;
+  }
+
+  .cardsMensalidades {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .welcome {
+    margin-bottom: 2rem;
+  }
+
+  .dashboard {
+    gap: 2rem;
+  }
+
+  .secao h2 {
+    font-size: 1.35rem;
+  }
+
+  .card {
+    min-height: 130px;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .paymentInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,51 @@
+.pagina {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.titulo {
+  margin: 0;
+
+  color: #111827;
+  font-size: 1.9rem;
+  letter-spacing: -0.03em;
+}
+
+.mensagem,
+.erro {
+  margin: 0;
+  padding: 0.75rem;
+
+  border-radius: 7px;
+  font-size: 0.9rem;
+}
+
+.mensagem {
+  color: #166534;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.erro {
+  color: #991b1b;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 2rem 1rem 3rem;
+    gap: 1.25rem;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+}
