@@ -1107,7 +1107,7 @@ CREATE TABLE IF NOT EXISTS "public"."mensalidades" (
     "data_pagamento" "date",
     "situacao" character varying(10) DEFAULT 'pendente'::character varying NOT NULL,
     "registrado_por" "uuid",
-    CONSTRAINT "mensalidade_mes_referencia" CHECK ((EXTRACT(day FROM "mes_referencia") = (1)::numeric)),
+    CONSTRAINT "mensalidade_mes_referencia" CHECK ((EXTRACT("day" FROM "mes_referencia") = (1)::numeric)),
     CONSTRAINT "mensalidade_pagamento" CHECK ((((("situacao")::"text" = 'pendente'::"text") AND ("data_pagamento" IS NULL)) OR ((("situacao")::"text" = 'paga'::"text") AND ("data_pagamento" IS NOT NULL)))),
     CONSTRAINT "mensalidades_situacao_check" CHECK ((("situacao")::"text" = ANY ((ARRAY['pendente'::character varying, 'paga'::character varying])::"text"[]))),
     CONSTRAINT "mensalidades_valor_check" CHECK (("valor" > (0)::numeric))
@@ -1365,7 +1365,7 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 
 
 
-GRANT ALL ON FUNCTION "public"."cadastrar_matricula"("p_aluno_id" "uuid", "p_turma_id" "uuid") TO "anon";
+REVOKE ALL ON FUNCTION "public"."cadastrar_matricula"("p_aluno_id" "uuid", "p_turma_id" "uuid") FROM PUBLIC;
 GRANT ALL ON FUNCTION "public"."cadastrar_matricula"("p_aluno_id" "uuid", "p_turma_id" "uuid") TO "authenticated";
 GRANT ALL ON FUNCTION "public"."cadastrar_matricula"("p_aluno_id" "uuid", "p_turma_id" "uuid") TO "service_role";
 
@@ -1395,7 +1395,7 @@ GRANT ALL ON FUNCTION "public"."editar_turma"("p_turma_id" "uuid", "p_nome" "tex
 
 
 
-GRANT ALL ON FUNCTION "public"."encerrar_matricula"("p_matricula_id" "uuid") TO "anon";
+REVOKE ALL ON FUNCTION "public"."encerrar_matricula"("p_matricula_id" "uuid") FROM PUBLIC;
 GRANT ALL ON FUNCTION "public"."encerrar_matricula"("p_matricula_id" "uuid") TO "authenticated";
 GRANT ALL ON FUNCTION "public"."encerrar_matricula"("p_matricula_id" "uuid") TO "service_role";
 
