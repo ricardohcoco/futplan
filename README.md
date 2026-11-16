@@ -4,17 +4,19 @@ O **FutPlan** é um sistema web desenvolvido para auxiliar na gestão de escolin
 
 A aplicação centraliza o gerenciamento de alunos, responsáveis, turmas, matrículas e mensalidades, permitindo que as principais atividades administrativas da escolinha sejam realizadas em um único sistema.
 
-Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) do curso de Análise e Desenvolvimento de Sistemas.
+Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) do curso de **Análise e Desenvolvimento de Sistemas da Universidade Luterana do Brasil (ULBRA)**.
 
 ## 🌐 Acesso ao sistema
 
-O FutPlan está disponível em:
+O FutPlan está publicado e pode ser acessado pelo endereço:
 
-**Link:** [será adicionado após o deploy]
+**Aplicação:** https://futplan.vercel.app/
 
-Para acessar o sistema, utilize as credenciais disponibilizadas para avaliação do projeto.
+**Repositório:** https://github.com/ricardohcoco/futplan
 
-> O acesso é restrito a usuários autorizados. Não há cadastro público de usuários pela aplicação.
+Para avaliação acadêmica, foram criadas contas específicas com os perfis Gestor e Administrativo. As credenciais de demonstração são disponibilizadas no documento de entrega da disciplina.
+
+> O acesso é restrito a usuários autorizados. A aplicação não disponibiliza cadastro público de usuários.
 
 ---
 
@@ -24,186 +26,273 @@ Após realizar o login, o usuário será direcionado ao **Dashboard**, que apres
 
 O menu superior permite acessar as principais áreas do sistema:
 
-- **Início**
-- **Alunos**
-- **Turmas**
-- **Matrículas**
-- **Mensalidades**
+- Início
+- Alunos
+- Turmas
+- Matrículas
+- Mensalidades
 
 ### 1. Dashboard
 
 Na página inicial são apresentados indicadores gerais do sistema:
 
-- quantidade de alunos ativos;
-- quantidade de turmas ativas;
-- quantidade de matrículas ativas;
-- mensalidades pagas e pendentes no mês atual;
-- quantidade de mensalidades em atraso.
+- Quantidade de alunos ativos.
+- Quantidade de turmas ativas.
+- Quantidade de matrículas ativas.
+- Mensalidades pagas e pendentes no mês atual.
+- Quantidade de mensalidades em atraso.
 
 Caso existam mensalidades atrasadas, os detalhes podem ser consultados na página **Mensalidades**, utilizando o filtro **Atrasadas**.
 
----
-
 ### 2. Alunos e responsáveis
 
-Na página **Alunos** é possível cadastrar e consultar os alunos da escolinha.
+Na página **Alunos**, é possível cadastrar e consultar os alunos da escolinha.
 
 Antes de cadastrar um aluno, é necessário possuir um responsável cadastrado.
 
-O cadastro do responsável solicita:
-
-- nome;
-- telefone;
-- consentimento para tratamento dos dados pessoais.
+O cadastro do responsável solicita nome, telefone e consentimento para tratamento dos dados pessoais.
 
 Após o cadastro, o responsável pode ser localizado pelo campo de busca no formulário do aluno.
 
-Para cadastrar um aluno, informe:
+O cadastro do aluno inclui:
 
-- nome;
-- data de nascimento;
-- endereço;
-- escola;
-- turno escolar;
-- responsável;
-- parentesco.
+- Nome.
+- Data de nascimento.
+- Endereço.
+- Escola.
+- Turno escolar.
+- Responsável.
+- Parentesco.
 
 O sistema aceita alunos com idade entre **5 e 15 anos**.
 
-A página também permite:
+Também permite pesquisar alunos, visualizar registros ativos e inativos, editar informações, inativar cadastros e consultar os detalhes de cada aluno.
 
-- pesquisar alunos pelo nome;
-- visualizar alunos ativos e inativos;
-- editar dados;
-- inativar alunos;
-- acessar os detalhes de cada aluno.
-
-Na página de detalhes é possível consultar também a matrícula atual e o histórico de mensalidades do aluno.
-
----
+Na página de detalhes é possível visualizar a matrícula atual e o histórico de mensalidades.
 
 ### 3. Turmas
 
-Na página **Turmas** é possível cadastrar e administrar as turmas disponíveis na escolinha.
+Na página **Turmas**, é possível cadastrar e administrar as turmas disponíveis.
 
-Para cada turma são definidos dados como:
+Cada turma possui:
 
-- nome;
-- faixa etária;
-- turno;
-- horário;
-- dias de treinamento;
-- capacidade máxima.
+- Nome.
+- Faixa etária.
+- Turno.
+- Horário de treinamento.
+- Dias de treinamento.
+- Capacidade máxima.
 
 Os treinamentos são organizados de segunda a sexta-feira nos períodos da manhã e da tarde.
 
-Cada turma possui capacidade máxima de **20 alunos**.
+Cada turma pode possuir até **20 alunos**.
 
-Também é possível pesquisar, editar, consultar e inativar turmas.
-
----
+O sistema permite pesquisar, consultar, editar e inativar turmas.
 
 ### 4. Matrículas
 
-Na página **Matrículas** é realizada a associação entre um aluno e uma turma.
+A página **Matrículas** permite associar alunos às turmas disponíveis.
 
-Para criar uma matrícula:
+Para realizar uma matrícula:
 
-1. pesquise o aluno pelo nome;
-2. selecione o aluno desejado;
-3. selecione uma turma disponível;
-4. clique em **Cadastrar matrícula**.
+1. Pesquise o aluno pelo nome.
+2. Selecione o aluno desejado.
+3. Escolha uma turma disponível.
+4. Confirme o cadastro da matrícula.
 
-O sistema aplica automaticamente as regras necessárias para a matrícula, incluindo:
+O sistema valida automaticamente:
 
-- compatibilidade entre a idade do aluno e a faixa etária da turma;
-- compatibilidade entre o turno escolar e o turno de treinamento;
-- disponibilidade de vagas;
-- existência de apenas uma matrícula ativa por aluno.
+- Compatibilidade entre a idade do aluno e a faixa etária da turma.
+- Compatibilidade entre o turno escolar e o turno de treinamento.
+- Disponibilidade de vagas.
+- Existência de apenas uma matrícula ativa por aluno.
 
-O aluno que estuda pela manhã deve treinar no período da tarde, enquanto o aluno que estuda à tarde deve treinar pela manhã.
+O aluno que estuda pela manhã deve treinar à tarde, enquanto o aluno que estuda à tarde deve treinar pela manhã.
 
-As matrículas também podem ser encerradas sem apagar seu histórico.
-
----
+As matrículas podem ser encerradas, preservando o histórico dos registros.
 
 ### 5. Mensalidades
 
-Na página **Mensalidades** é realizado o controle financeiro dos alunos.
+A página **Mensalidades** permite controlar as cobranças associadas às matrículas.
 
-O usuário com perfil **Gestor** pode:
+O usuário com perfil Gestor pode definir o valor padrão e gerar as mensalidades de um determinado mês.
 
-- definir o valor padrão da mensalidade;
-- gerar as mensalidades de um determinado mês.
+O valor aplicado no momento da geração permanece registrado na cobrança, mesmo após alterações posteriores no valor padrão.
 
-O valor utilizado no momento da geração fica registrado na mensalidade.
+As mensalidades podem ser consultadas por mês, nome do aluno e situação:
 
-As mensalidades podem ser consultadas utilizando filtros como:
+- Pendentes.
+- Atrasadas.
+- Pagas.
+- Todas.
 
-- pendentes;
-- atrasadas;
-- pagas;
-- todas.
+O pagamento pode ser registrado diretamente na mensalidade. Nessa operação, o sistema registra automaticamente a data e identifica o usuário responsável.
 
-Também é possível pesquisar pelo nome do aluno e filtrar pelo mês de referência.
-
-O pagamento pode ser registrado diretamente na mensalidade. Ao realizar essa operação, a data do pagamento é registrada automaticamente pelo sistema.
-
-> O registro de pagamento é definitivo no escopo atual do sistema.
+O registro de pagamento é definitivo no escopo atual da aplicação.
 
 ---
 
 ## 👥 Perfis de acesso
 
-O FutPlan possui dois perfis de usuário:
+O FutPlan possui dois perfis:
 
-### Gestor
+**Gestor:** possui acesso às funcionalidades administrativas do sistema, incluindo configuração do valor da mensalidade e geração mensal das cobranças.
 
-Possui acesso às funcionalidades administrativas do sistema, incluindo definição do valor da mensalidade e geração mensal das cobranças.
+**Administrativo:** pode executar as operações administrativas permitidas e registrar pagamentos, mas não pode alterar o valor padrão nem gerar novas mensalidades.
 
-### Administrativo
-
-Pode utilizar as funcionalidades operacionais do sistema e registrar pagamentos, mas não pode alterar o valor da mensalidade nem gerar novas mensalidades.
+Os perfis são controlados pela autenticação e pelas regras de autorização do sistema.
 
 ---
 
 ## 🔒 Segurança e privacidade
 
-O acesso ao sistema exige autenticação.
+O FutPlan utiliza o **Supabase Auth** para autenticação de usuários e o **Row Level Security (RLS)** do PostgreSQL para controle de acesso aos dados.
 
-O FutPlan utiliza controle de acesso aos dados e diferencia as permissões de acordo com o perfil do usuário.
+As operações também possuem validações no banco de dados por meio de funções, restrições e triggers.
 
-O cadastro de responsáveis também registra o consentimento para tratamento dos dados pessoais utilizados pelo sistema.
+O cadastro de responsáveis registra o consentimento para tratamento dos dados pessoais.
 
-Alunos, turmas e matrículas utilizam inativação ou encerramento quando necessário, permitindo preservar os registros históricos relacionados à operação da escolinha.
+Alunos, responsáveis, turmas e matrículas possuem mecanismos de inativação ou encerramento, conforme as regras implementadas, preservando informações históricas quando necessário.
+
+Os registros disponibilizados para a demonstração acadêmica são fictícios.
 
 ---
 
 ## 🛠️ Tecnologias utilizadas
 
-O FutPlan foi desenvolvido utilizando:
+| Tecnologia | Versão principal | Finalidade |
+|---|---|---|
+| React | 19 | Interface do sistema |
+| TypeScript | 6 | Tipagem estática |
+| Vite | 8 | Ambiente de desenvolvimento e build |
+| React Router DOM | 7 | Navegação entre páginas |
+| Supabase JS | 2 | Integração com os serviços Supabase |
+| PostgreSQL | Gerenciado pelo Supabase | Banco de dados relacional |
+| CSS Modules | — | Estilização dos componentes |
+| Vercel | — | Hospedagem da aplicação web |
 
-- **React**
-- **TypeScript**
-- **Vite**
-- **Supabase**
-- **PostgreSQL**
-- **CSS Modules**
+As versões específicas das dependências estão documentadas no arquivo `package.json` e resolvidas pelo `package-lock.json`.
 
-O Supabase é utilizado para autenticação, persistência dos dados e execução das regras de acesso e operações do sistema.
+### Arquitetura
+
+O FutPlan utiliza uma arquitetura web com:
+
+- **Frontend:** React, TypeScript e CSS Modules.
+- **Autenticação:** Supabase Auth.
+- **Banco de dados:** PostgreSQL hospedado no Supabase.
+- **Regras de negócio:** validações, funções SQL, triggers, constraints e políticas RLS.
+- **Hospedagem:** Vercel.
+
+A aplicação não utiliza uma API própria em Node.js ou Express. A comunicação com os serviços do Supabase é realizada por meio da biblioteca oficial `@supabase/supabase-js`.
 
 ---
 
-## 📱 Compatibilidade
+## 💻 Instalação e execução local
 
-A interface do FutPlan foi desenvolvida de forma responsiva, permitindo sua utilização em diferentes tamanhos de tela.
+### Pré-requisitos
 
-Para a avaliação, recomenda-se utilizar uma versão atualizada de navegadores como Google Chrome, Microsoft Edge ou Mozilla Firefox.
+Para executar o FutPlan localmente, recomenda-se utilizar:
+
+- Node.js 24.x — versão utilizada no desenvolvimento: 24.12.0.
+
+- npm 11.x — versão utilizada no desenvolvimento: 11.6.2.
+
+- Git — para clonar o repositório.
+
+- Projeto Supabase configurado — para autenticação e acesso ao banco PostgreSQL.
+
+Outras versões compatíveis podem funcionar, mas o ambiente acima foi utilizado durante o desenvolvimento e os testes do projeto.
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/ricardohcoco/futplan.git
+cd futplan
+```
+
+### 2. Instalar as dependências
+
+```bash
+npm install
+```
+
+### 3. Configurar as variáveis de ambiente
+
+Na raiz do projeto, crie um arquivo `.env.local` com base no `.env.example`.
+
+Informe as variáveis:
+
+```env
+VITE_SUPABASE_URL=https://seu-projeto.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=sua-chave-publica
+```
+
+Os valores devem corresponder a um projeto Supabase configurado para utilizar o FutPlan.
+
+A chave utilizada pelo frontend deve ser uma chave pública do Supabase. Não utilize senhas de banco de dados ou chaves administrativas nesse arquivo.
+
+### 4. Iniciar a aplicação
+
+```bash
+npm run dev
+```
+
+O Vite exibirá no terminal o endereço de acesso local, normalmente:
+
+http://localhost:5173
+
+### 5. Outros comandos disponíveis
+
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o ambiente de desenvolvimento |
+| `npm run lint` | Executa a verificação estática com ESLint |
+| `npm run build` | Executa a compilação TypeScript e gera o build de produção |
+| `npm run preview` | Permite visualizar localmente o build |
+
+---
+
+## 🗄️ Banco de dados
+
+O projeto utiliza PostgreSQL por meio do Supabase.
+
+O arquivo [`database/schema.sql`](database/schema.sql) contém a estrutura do schema `public` utilizada pela aplicação, incluindo tabelas, relacionamentos, funções, triggers, restrições e políticas de segurança.
+
+O script documenta a estrutura do banco e suas regras de negócio.
+
+**Observação:** a aplicação também depende dos serviços gerenciados do Supabase, especialmente o Supabase Auth. Para reproduzir o sistema em outro projeto, é necessário configurar esses serviços e criar usuários autorizados com os perfis correspondentes na tabela `public.usuarios`.
+
+O script de estrutura não contém as senhas dos usuários nem os registros de demonstração do banco hospedado.
+
+---
+
+## 🔎 Orientações para avaliação do projeto
+
+Para avaliar o FutPlan, recomenda-se:
+
+1. Acessar a versão publicada na Vercel.
+2. Entrar utilizando uma das credenciais disponibilizadas no documento de entrega da AS.
+3. Consultar os registros fictícios já cadastrados.
+4. Navegar pelos módulos de alunos, turmas, matrículas e mensalidades.
+5. Verificar as regras de matrícula, os filtros e as operações permitidas para cada perfil.
+6. Consultar o código-fonte e o script SQL disponíveis neste repositório.
+
+O ambiente de demonstração possui responsáveis, alunos, turmas, matrículas e mensalidades fictícios, incluindo exemplos de pagamentos realizados e pendentes.
+
+Recomenda-se utilizar versões atualizadas dos navegadores Google Chrome, Microsoft Edge ou Mozilla Firefox.
+
+---
+
+## 📱 Responsividade e compatibilidade
+
+A interface do FutPlan foi desenvolvida para se adaptar a diferentes tamanhos de tela.
+
+A aplicação foi projetada para utilização em navegadores modernos, com foco em usabilidade, organização das informações e simplicidade de navegação.
 
 ---
 
 ## 🎓 Sobre o projeto
 
-O FutPlan foi desenvolvido como projeto acadêmico com o objetivo de aplicar, em uma aplicação web completa, conhecimentos adquiridos durante a graduação em **Análise e Desenvolvimento de Sistemas**.
+O FutPlan foi desenvolvido como projeto acadêmico com o objetivo de aplicar conhecimentos adquiridos durante a graduação em **Análise e Desenvolvimento de Sistemas**.
 
-O sistema foi projetado para atender às necessidades essenciais de gestão de uma escolinha de futebol, priorizando simplicidade de utilização, organização das informações e aplicação das regras de negócio definidas para o projeto.
+O sistema busca atender às necessidades essenciais de gestão de uma escolinha de futebol infantil, priorizando organização das informações, simplicidade de utilização, integridade dos dados e aplicação das regras de negócio definidas durante o projeto.
